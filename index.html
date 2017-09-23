@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html ng-app="codelife">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>Code Life</title>
+	<!-- Favicon-->
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Bootstrap Core Css -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+
+
+
+</head>
+
+<body ng-controller="MainCtrl">
+
+	<!-- header section -->
+	<div class="header">
+		<nav class="navbar bg-teal navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"></button>
+					<a class="navbar-brand" href="#" title="Code Life"><i class="material-icons large">code</i> Code Life</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-center text-center">
+						<li class="active">
+							<a href="index.html" title="Home">
+								<i class="material-icons hidden-lg hidden-xl">home</i> <span class="hidden-sm hidden-xs">Home</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" title="Blog">
+								<i class="material-icons hidden-lg hidden-xl">forum</i>
+								<span class="hidden-sm hidden-xs">Blog</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" title="Profile">
+								<i class="material-icons hidden-lg hidden-xl">person</i>
+								<span class="hidden-sm hidden-xs">Profile</span>
+							</a>
+						</li>
+						<li>
+							<a href="contact.html" title="Contact">
+								<i class="material-icons hidden-lg hidden-xl">sms</i>
+								<span class="hidden-sm hidden-xs">Contact</span>
+							</a>
+						</li>
+						<li class="hidden-lg hidden-md hidden-sm">
+							<a href="#" title="Grid View" ng-click="GridLayout()">
+								<i class="material-icons hidden-lg hidden-xl">view_module</i>
+							</a>
+						</li>
+						<li class="hidden-lg hidden-md hidden-sm">
+							<a href="#" title="List view" ng-click="ListLayout()">
+								<i class="material-icons">view_list</i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="material-icons">search</i>
+							</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right hidden-xs">
+						<li class="">
+							<a href="#" ng-click="GridLayout()">
+								<i class="material-icons">view_module</i>
+							</a>
+						</li>
+						<li class="">
+							<a href="#" ng-click="ListLayout()">
+								<i class="material-icons">view_list</i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="clearfix">
+			&nsp;
+		</div>
+	</div>
+	<!-- end of header section -->
+	<!-- content section -->
+	<div class="content-section">
+		<!-- grid layout -->
+		<div class="container" id="gridlayout">
+			<div class="row" ng-if="posts">
+				<div class="col-sm-6 col-md-4 col-lg-3" ng-repeat="post in posts.data">
+					<div class="card">
+						<div class="header bg-teal">
+							<h2>
+								{{ post.title }} <small>{{post.post_type}}</small>
+							</h2>
+							<ul class="header-dropdown m-r--5">
+								<li>
+									<a href="single.html">
+										<i class="material-icons">share</i>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="body">
+							Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat. Ridiculus nostra.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- list layout -->
+		<div class="container" id="listlayout">
+			<div class="row" ng-id="posts">
+				<div class="col-md-9" ng-repeat="post in posts.data">
+					<div class="info-box hover-expand-effect">
+						<div class="icon bg-teal">
+							<i class="material-icons">equalizer</i>
+						</div>
+						<div class="content">
+							<div class="number">{{ post.title }}</div>
+							<div class="text">{{post.post_type}}</div>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+	<!-- end of content section -->
+	<!-- foter section -->
+	<div class="footer ">
+		<ul class="list-unstyled list-inline text-center">
+			<li><i class="fa fa-facebook fa-2x"></i></li>
+			<li><i class="fa fa-twitter fa-2x"></i></li>
+			<li><i class="fa fa-linkedin fa-2x"></i></li>
+			<li><i class="fa fa-github fa-2x"></i></li>
+		</ul>
+		<p class="text-center">Copyright Reserved</p>
+	</div>
+	<!-- end of footer section -->
+	<!-- Jquery Core Js -->
+	<script src="assets/js/jquery.min.js"></script>
+	<!-- Bootstrap Core Js -->
+	<script src="assets/js/bootstrap.min.js"></script>
+	<!-- angular js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="assets/js/main.js" charset="utf-8"></script>
+</body>
+
+</html>
