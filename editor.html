@@ -21,13 +21,9 @@
 	<!-- bootstrap select -->
 	<link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
 	<link rel="stylesheet" href="assets/css/material-design-iconic-font.min.css">
-
-
-
 </head>
 
 <body ng-controller="MainCtrl">
-
 	<!-- header section -->
 	<div class="header">
 		<nav class="navbar bg-teal navbar-fixed-top">
@@ -97,52 +93,73 @@
 		</div>
 	</div>
 	<!-- end of header section -->
+
 	<!-- content section -->
 	<div class="content-section">
-		<!-- grid layout -->
-		<div class="container" id="gridlayout">
-			<div class="row" ng-if="posts">
-				<div class="col-sm-6 col-md-4 col-lg-3" ng-repeat="post in posts.data">
-					<div class="card">
-						<div class="header bg-teal">
-							<h2>
-								{{ post.title }} <small>{{post.post_type}}</small>
-							</h2>
-							<ul class="header-dropdown m-r--5">
-								<li>
-									<a href="single.html">
-										<i class="material-icons">share</i>
-									</a>
-								</li>
-							</ul>
+		<!-- editor section -->
+		<div class="container">
+			<div class="card">
+				<form class="form-group form-float" action="" method="post">
+					<div class="header">
+						<div class="row">
+							<div class="col-md-11 col-sm-10 col-xs-8">
+								<h4>POST</h4>
+							</div>
+							<div class="col-md-1 col-sm-2 col-xs-4">
+								<input type="submit" class="btn btn-primary" name="" placeholder="Post" value="Post">
+							</div>
 						</div>
-						<div class="body">
-							Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat. Ridiculus nostra.
-						</div>
+
 					</div>
-				</div>
+					<div class="body">
+						<div class="row">
+							<div class="col-md-9">
+								<div class="form-line">
+									<input type="text" class="form-control" id="" placeholder="Enter the Title here">
+									<p class="help-block"></p>
+								</div>
+
+								<div class="form-line">
+									<textarea name="name" id="tinymce" class="form-control" rows="4" cols="40" placeholder="Enter the post content"></textarea>
+									<p class="help-block"></p>
+								</div>
+
+							</div>
+							<div class="col-md-3">
+								<div class="row">
+									<div class="col-xs-8">
+										<div class="form-line">
+											<input type="text" class="form-control" name="" value="" placeholder="ID">
+											<p class="help-block"></p>
+										</div>
+									</div>
+									<div class="col-xs-4">
+										<div class="">
+											<span class="label label-default">234</span>
+										</div>
+									</div>
+								</div>
+								<div class="form-line">
+									<select class="form-control" name="">
+										<option value="">Select category</option>
+										<option value="">programming</option>
+										<option value="">design</option>
+									</select>
+									<p class="help-block"></p>
+								</div>
+								<img src="" alt="" class="img-responsive">
+								<div class="form-line">
+									<input type="text" class="form-control" id="" placeholder="Image URL">
+									<p class="help-block"></p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</form>
 			</div>
 		</div>
-		<!-- list layout -->
-		<div class="container" id="listlayout">
-			<div class="row" ng-id="posts">
-				<div class="col-md-9" ng-repeat="post in posts.data">
-					<div class="info-box hover-expand-effect">
-						<div class="icon bg-teal">
-							<i class="material-icons">equalizer</i>
-						</div>
-						<div class="content">
-							<div class="number">{{ post.title }}</div>
-							<div class="text">{{post.post_type}}</div>
 
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
 	</div>
 	<!-- end of content section -->
 	<!-- foter section -->
@@ -156,15 +173,18 @@
 		<p class="text-center">Copyright Reserved</p>
 	</div>
 	<!-- end of footer section -->
+
 	<!-- Jquery Core Js -->
 	<script src="assets/js/jquery.min.js"></script>
+
 	<!-- Bootstrap Core Js -->
 	<script src="assets/js/bootstrap.min.js"></script>
 	<!-- angular js -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 	<script src="assets/js/main.js" charset="utf-8"></script>
 	<script src="assets/js/tinymce.js" charset="utf-8"></script>
-	<script src="assets/js/bootstrap-select.min.js" charset="utf-8"></script>
+	<!-- bootstrap select -->
+	<link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
 </body>
 
 </html>

@@ -1,7 +1,15 @@
-var app = angular.module('codelife', []);
+var app = angular.module('codelife', []); //'ngRoute'
+//config
+// app.config(['$routeProvider', function($routeProvider) {
+// 	$routeProvider.when('/main', {
+// 		templateUrl: 'main.html',
+// 		controller: 'MainCtrl'
+// 	});
+//
+// }]);
 // services
 // main controller
-app.controller('MainCtrl', function($scope, $http) {
+app.controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
 
 	// get post from json
 	$scope.PostLoad = function() {
@@ -26,4 +34,4 @@ app.controller('MainCtrl', function($scope, $http) {
 		$("#gridlayout").hide('slow');
 		$("#listlayout").show();
 	}
-});
+}]);

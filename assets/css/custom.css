@@ -44,3 +44,6 @@ body{
 .bg-teal a{
   color: white;
 }
+.nav>li>a:hover{
+  background-color: none;
+}
