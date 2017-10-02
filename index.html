@@ -26,10 +26,10 @@
 
 </head>
 
-<body ng-controller="MainCtrl">
+<body >
 
 	<!-- header section -->
-	<div class="header">
+	<div class="header" ng-controller="MainCtrl">
 		<nav class="navbar bg-teal navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -39,30 +39,30 @@
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav navbar-center text-center">
 						<li class="active">
-							<a href="index.html" title="Home">
+							<a href="#!" title="Home">
 								<i class="material-icons hidden-lg hidden-xl">home</i> <span class="hidden-sm hidden-xs">Home</span>
 							</a>
 						</li>
 						<li>
-							<a href="#" title="Blog">
+							<a href="#!blog" title="Blog">
 								<i class="material-icons hidden-lg hidden-xl">forum</i>
 								<span class="hidden-sm hidden-xs">Blog</span>
 							</a>
 						</li>
 						<li>
-							<a href="#" title="Profile">
+							<a href="#!profile" title="Profile">
 								<i class="material-icons hidden-lg hidden-xl">person</i>
 								<span class="hidden-sm hidden-xs">Profile</span>
 							</a>
 						</li>
 						<li>
-							<a href="contact.html" title="Contact">
+							<a href="#!contact" title="Contact">
 								<i class="material-icons hidden-lg hidden-xl">sms</i>
 								<span class="hidden-sm hidden-xs">Contact</span>
 							</a>
 						</li>
 						<li class="hidden-lg hidden-md hidden-sm">
-							<a href="#" title="Grid View" ng-click="GridLayout()">
+							<a href="" title="Grid View" ng-click="GridLayout()">
 								<i class="material-icons hidden-lg hidden-xl">view_module</i>
 							</a>
 						</li>
@@ -76,15 +76,20 @@
 								<i class="material-icons">search</i>
 							</a>
 						</li>
+						<li>
+							<a href="#!editor">
+								<i class="material-icons">add </i>
+							</a>
+						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right hidden-xs">
 						<li class="">
-							<a href="#" ng-click="GridLayout()">
+							<a href="#!blog" ng-click="GridLayout()">
 								<i class="material-icons">view_module</i>
 							</a>
 						</li>
 						<li class="">
-							<a href="#" ng-click="ListLayout()">
+							<a href="#!blog" ng-click="ListLayout()">
 								<i class="material-icons">view_list</i>
 							</a>
 						</li>
@@ -98,51 +103,8 @@
 	</div>
 	<!-- end of header section -->
 	<!-- content section -->
-	<div class="content-section">
-		<!-- grid layout -->
-		<div class="container" id="gridlayout">
-			<div class="row" ng-if="posts">
-				<div class="col-sm-6 col-md-4 col-lg-3" ng-repeat="post in posts.data">
-					<div class="card">
-						<div class="header bg-teal">
-							<h2>
-								{{ post.title }} <small>{{post.post_type}}</small>
-							</h2>
-							<ul class="header-dropdown m-r--5">
-								<li>
-									<a href="single.html">
-										<i class="material-icons">share</i>
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="body">
-							Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat. Ridiculus nostra.
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- list layout -->
-		<div class="container" id="listlayout">
-			<div class="row" ng-id="posts">
-				<div class="col-md-9" ng-repeat="post in posts.data">
-					<div class="info-box hover-expand-effect">
-						<div class="icon bg-teal">
-							<i class="material-icons">equalizer</i>
-						</div>
-						<div class="content">
-							<div class="number">{{ post.title }}</div>
-							<div class="text">{{post.post_type}}</div>
+	<div class="content-section" ng-view>
 
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
 	</div>
 	<!-- end of content section -->
 	<!-- foter section -->
@@ -162,6 +124,7 @@
 	<script src="assets/js/bootstrap.min.js"></script>
 	<!-- angular js -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
 	<script src="assets/js/main.js" charset="utf-8"></script>
 	<script src="assets/js/tinymce.js" charset="utf-8"></script>
 	<script src="assets/js/bootstrap-select.min.js" charset="utf-8"></script>

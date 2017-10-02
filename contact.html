@@ -1,203 +1,92 @@
-<!DOCTYPE html>
-<html>
+<div class="content-section" ng-controller="ContactCtrl">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="card">
+					<div class="header">
+						<h2>CONTACT</h2>
+						<ul class="header-dropdown m-r--5">
+							<li class="dropdown">
+								<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+									<i class="material-icons">more_vert</i>
+								</a>
+								<ul class="dropdown-menu pull-right">
+									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Action</a></li>
+									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Another action</a></li>
+									<li><a href="javascript:void(0);" class=" waves-effect waves-block">Something else here</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="body">
+						<form method="post">
+							<div class="form-group form-float">
+								<div class="form-line">
+									<input type="text" id="" class="form-control" placeholder="Name">
+								</div>
+							</div>
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-	<title>Code Life</title>
-	<!-- Favicon-->
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
+							<div class="form-group">
+								<div class="form-line">
+									<input type="name" id="" class="form-control" placeholder="Email Address">
+								</div>
+							</div>
 
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<!-- Bootstrap Core Css -->
-	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+							<div class="form-group form-float">
+								<div class="form-line">
+									<textarea rows="4" class="form-control no-resize" placeholder="Please type what you think..."></textarea>
+								</div>
+							</div>
 
-	<link rel="stylesheet" type="text/css" href="assets/css/custom.css">
-
-</head>
-
-<body>
-	<!-- header section -->
-	<div class="header">
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"></button>
-					<a class="navbar-brand" href="#" title="Code Life"><i class="material-icons large">code</i> Code Life</a>
-				</div>
-				<div class="collapse navbar-collapse" id="myNavbar">
-					<ul class="nav navbar-nav navbar-center text-center">
-						<li class="">
-							<a href="index.html" title="Home">
-								<i class="material-icons hidden-lg hidden-xl">home</i> <span class="hidden-sm hidden-xs">Home</span>
-							</a>
-						</li>
-						<li>
-							<a href="#" title="Blog">
-								<i class="material-icons hidden-lg hidden-xl">forum</i>
-								<span class="hidden-sm hidden-xs">Blog</span>
-							</a>
-						</li>
-						<li>
-							<a href="#" title="Profile">
-								<i class="material-icons hidden-lg hidden-xl">person</i>
-								<span class="hidden-sm hidden-xs">Profile</span>
-							</a>
-						</li>
-						<li class="active">
-							<a href="contact.html" title="Contact">
-								<i class="material-icons hidden-lg hidden-xl">sms</i>
-								<span class="hidden-sm hidden-xs">Contact</span>
-							</a>
-						</li>
-						<li class="hidden-lg hidden-md hidden-sm">
-							<a href="#" title="Grid View">
-								<i class="material-icons hidden-lg hidden-xl">view_module</i>
-							</a>
-						</li>
-						<li class="hidden-lg hidden-md hidden-sm">
-							<a href="#" title="List view">
-								<i class="material-icons">view_list</i>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="material-icons">search</i>
-							</a>
-						</li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right hidden-xs">
-						<li class="">
-							<a href="#"><i class="material-icons">view_module</i></a>
-						</li>
-						<li class="">
-							<a href="#"><i class="material-icons">view_list</i></a>
-						</li>
-					</ul>
+							<button type="submit" class="btn btn-primary m-t-15 waves-effect">Comment</button>
+						</form>
+					</div>
 				</div>
 			</div>
-		</nav>
-		<div class="clearfix">
-			&nsp;
-		</div>
-	</div>
-	<!-- end of header section -->
-	<!-- content section -->
-	<div class="content-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="card">
-						<div class="header">
-							<h2>CONTACT</h2>
-							<ul class="header-dropdown m-r--5">
-								<li class="dropdown">
-									<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-										<i class="material-icons">more_vert</i>
-									</a>
-									<ul class="dropdown-menu pull-right">
-										<li><a href="javascript:void(0);" class=" waves-effect waves-block">Action</a></li>
-										<li><a href="javascript:void(0);" class=" waves-effect waves-block">Another action</a></li>
-										<li><a href="javascript:void(0);" class=" waves-effect waves-block">Something else here</a></li>
-									</ul>
-								</li>
-							</ul>
+			<div class="col-md-6">
+				<div class="card">
+					<div class="header">
+						<h2> COMMENTS</h2>
+					</div>
+					<div class="body" style="height:294px;overflow-y: scroll;">
+						<div class="media">
+							<div class="media-left">
+								<a href="javascript:void(0);">
+									<img class="media-object" src="http://placehold.it/64x64" width="64" height="64">
+								</a>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+								ante sollicitudin commodo.
+							</div>
 						</div>
-						<div class="body">
-							<form method="post">
-								<div class="form-group form-float">
-									<div class="form-line">
-										<input type="text" id="" class="form-control" placeholder="Name">
-									</div>
-								</div>
-
-								<div class="form-group">
-									<div class="form-line">
-										<input type="name" id="" class="form-control" placeholder="Email Address">
-									</div>
-								</div>
-
-								<div class="form-group form-float">
-									<div class="form-line">
-										<textarea rows="4" class="form-control no-resize" placeholder="Please type what you think..."></textarea>
-									</div>
-								</div>
-
-								<button type="submit" class="btn btn-primary m-t-15 waves-effect">Comment</button>
-							</form>
+						<div class="media">
+							<div class="media-left">
+								<a href="javascript:void(0);">
+									<img class="media-object" src="http://placehold.it/64x64" width="64" height="64">
+								</a>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+								ante sollicitudin commodo.
+							</div>
+						</div>
+						<div class="media">
+							<div class="media-left">
+								<a href="javascript:void(0);">
+									<img class="media-object" src="http://placehold.it/64x64" width="64" height="64">
+								</a>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+								ante sollicitudin commodo.
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6">
-					<div class="card">
-						<div class="header">
-							<h2> COMMENTS</h2>
-						</div>
-						<div class="body" style="height:294px;overflow-y: scroll;">
-							<div class="media">
-								<div class="media-left">
-									<a href="javascript:void(0);">
-										<img class="media-object" src="http://placehold.it/64x64" width="64" height="64">
-									</a>
-								</div>
-								<div class="media-body">
-									<h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
-									ante sollicitudin commodo.
-								</div>
-							</div>
-							<div class="media">
-								<div class="media-left">
-									<a href="javascript:void(0);">
-										<img class="media-object" src="http://placehold.it/64x64" width="64" height="64">
-									</a>
-								</div>
-								<div class="media-body">
-									<h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
-									ante sollicitudin commodo.
-								</div>
-							</div>
-							<div class="media">
-								<div class="media-left">
-									<a href="javascript:void(0);">
-										<img class="media-object" src="http://placehold.it/64x64" width="64" height="64">
-									</a>
-								</div>
-								<div class="media-body">
-									<h4 class="media-heading">Media heading</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
-									ante sollicitudin commodo.
-								</div>
-							</div>
-						</div>
-					</div>
 
-				</div>
 			</div>
-
 		</div>
-	</div>
-	<!-- end of content section -->
-	<!-- foter section -->
-	<div class="footer ">
-		<ul class="list-unstyled list-inline text-center">
-			<li><i class="fa fa-facebook fa-2x"></i></li>
-			<li><i class="fa fa-twitter fa-2x"></i></li>
-			<li><i class="fa fa-linkedin fa-2x"></i></li>
-			<li><i class="fa fa-github fa-2x"></i></li>
-		</ul>
-		<p class="text-center">Copyright Reserved</p>
-	</div>
-	<!-- end of footer section -->
-	<!-- Jquery Core Js -->
-	<script src="assets/js/jquery.min.js"></script>
-	<!-- Bootstrap Core Js -->
-	<script src="assets/js/bootstrap.min.js"></script>
-	<!-- materialize Core Js -->
-	<script src="assets/js/materialize.min.js"></script>
-</body>
 
-</html>
+	</div>
+</div>
