@@ -1,4 +1,8 @@
 <div class="" ng-controller="BlogCtrl">
+<!-- meta tags -->
+<meta name="description" content="{{ post.title }}">
+<meta name="keywords" content="{{post.post_type}},{{ post.title }} , blog, contact, ">
+<meta name="author" content="Prakash Arul">
   <!-- grid layout -->
   <div class="container" id="gridlayout">
     <div class="row" ng-if="posts">
@@ -10,7 +14,7 @@
             </h2>
             <ul class="header-dropdown m-r--5">
               <li>
-                <a href="single.html">
+                <a href="#!single/{{ post.id }}" data-id="{{ post.id }}" ng-click="GetPostid($event)">
                   <i class="material-icons">share</i>
                 </a>
               </li>

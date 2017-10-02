@@ -5,6 +5,11 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+	<!-- meta tags -->
+	<meta name="description" content="Codelife.ml">
+	<meta name="keywords" content="prakash, fullstack developer, blog, contact, ">
+	<meta name="author" content="Prakash Arul">
 	<title>Code Life</title>
 	<!-- Favicon-->
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -21,13 +26,15 @@
 	<!-- bootstrap select -->
 	<link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
 	<link rel="stylesheet" href="assets/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="assets/css/loader.css">
 
 
 
 </head>
 
 <body >
-
+	<!-- loader section -->
+	<div class="animated yt-loader" id="loader"></div>
 	<!-- header section -->
 	<div class="header" ng-controller="MainCtrl">
 		<nav class="navbar bg-teal navbar-fixed-top">
@@ -102,22 +109,41 @@
 		</div>
 	</div>
 	<!-- end of header section -->
+
 	<!-- content section -->
 	<div class="content-section" ng-view>
 
 	</div>
 	<!-- end of content section -->
+
 	<!-- foter section -->
-	<div class="footer ">
+	<div class="footer">
 		<ul class="list-unstyled list-inline text-center">
-			<li><i class="fa fa-facebook fa-2x"></i></li>
-			<li><i class="fa fa-twitter fa-2x"></i></li>
-			<li><i class="fa fa-linkedin fa-2x"></i></li>
-			<li><i class="fa fa-github fa-2x"></i></li>
+			<li>
+				<a href="https://www.facebook.com/prakash.arul.37">
+					<i class="fa fa-facebook fa-2x"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://twitter.com/Iam_Light02">
+					<i class="fa fa-twitter fa-2x"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.linkedin.com/in/prakash-arul-497513143/">
+					<i class="fa fa-linkedin fa-2x"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://github.com/prakasharul">
+					<i class="fa fa-github fa-2x"></i>
+				</a>
+			</li>
 		</ul>
 		<p class="text-center">Copyright Reserved</p>
 	</div>
 	<!-- end of footer section -->
+
 	<!-- Jquery Core Js -->
 	<script src="assets/js/jquery.min.js"></script>
 	<!-- Bootstrap Core Js -->

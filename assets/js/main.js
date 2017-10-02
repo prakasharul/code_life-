@@ -4,7 +4,7 @@ app.config(['$routeProvider', function($routeProvider) {
 	$routeProvider
 		.when('/', {
 			templateUrl: 'home.html',
-			controller: 'MainCtrl',
+			controller: 'HomeCtrl',
 		})
 		.when('/blog', {
 			templateUrl: 'blog.html',
@@ -22,6 +22,10 @@ app.config(['$routeProvider', function($routeProvider) {
 			templateUrl: 'profile.html',
 			controller: 'ProfileCtrl'
 		})
+		.when('/single/:ID', {
+			templateUrl: 'single.html',
+			controller: 'SingleCtrl'
+		})
 		.when('/404', {
 			templateUrl: '404.html',
 			controller: 'ErrorCtrl'
@@ -32,14 +36,19 @@ app.config(['$routeProvider', function($routeProvider) {
 
 
 }]);
+
 // services
+
 // main controller
 app.controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
 	console.log("home");
+
 	// grid layout
 	$scope.GridLayout = function() {
+		$("#loader").show();
 		$("#listlayout").hide('slow');
 		$("#gridlayout").show();
+		$("#loader").hide();
 	};
 	$scope.GridLayout();
 
@@ -48,9 +57,9 @@ app.controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
 		$("#gridlayout").hide('slow');
 		$("#listlayout").show();
 	};
-	$scope.ListLayout();
 
 }]);
+
 //blog controller
 app.controller('BlogCtrl', ['$scope', '$http', function($scope, $http) {
 	console.log("blog");
@@ -63,9 +72,23 @@ app.controller('BlogCtrl', ['$scope', '$http', function($scope, $http) {
 			});
 	};
 	$scope.PostLoad();
-
-
 }]);
+
+// post page controller
+app.controller('SingleCtrl', ['$scope', '$http',
+	'$routeParams',
+	function(
+		$scope, $http, $routeParams) {
+		console.log("post");
+		$scope.Postid = $routeParams.ID - 1;
+
+		$http.get('main.json')
+			.then(function(response) {
+				$scope.posts = response.data;
+				console.log($scope.posts);
+			});
+	}
+]);
 // contact controller
 app.controller('ContactCtrl', ['$scope', '$http', function($scope, $http) {
 	console.log("contact");
@@ -81,4 +104,9 @@ app.controller('ProfileCtrl', ['$scope', '$http', function($scope, $http) {
 // error controller
 app.controller('ErrorCtrl', ['$scope', '$http', function($scope, $http) {
 	console.log("404");
-}])
+}]);
+
+// home controller
+app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
+	console.log("home");
+}]);
