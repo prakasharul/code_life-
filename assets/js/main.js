@@ -65,7 +65,7 @@ app.controller('BlogCtrl', ['$scope', '$http', function($scope, $http) {
 	console.log("blog");
 	// get post from json
 	$scope.PostLoad = function() {
-		$http.get('main.json')
+		$http.get('https://fromtomorrow.000webhostapp.com/main.json')
 			.then(function(response) {
 				$scope.posts = response.data;
 				console.log(response.data);
