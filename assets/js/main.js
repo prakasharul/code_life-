@@ -1,4 +1,6 @@
 var app = angular.module('codelife', ['ngRoute']); //
+
+
 //config -route
 app.config(['$routeProvider', function($routeProvider) {
 	$routeProvider
@@ -45,10 +47,8 @@ app.controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
 
 	// grid layout
 	$scope.GridLayout = function() {
-		$("#loader").show();
 		$("#listlayout").hide('slow');
 		$("#gridlayout").show();
-		$("#loader").hide();
 	};
 	$scope.GridLayout();
 
@@ -110,3 +110,18 @@ app.controller('ErrorCtrl', ['$scope', '$http', function($scope, $http) {
 app.controller('HomeCtrl', ['$scope', '$http', function($scope, $http) {
 	console.log("home");
 }]);
+
+
+/**
+ * extends string prototype object to get a string with a number of characters from a string.
+ *
+ * @type {Function|*}
+ */
+String.prototype.trunc = String.prototype.trunc ||
+	function(n) {
+
+		// this will return a substring and
+		// if its larger than 'n' then truncate and append '...' to the string and return it.
+		// if its less than 'n' then return the 'string'
+		return this.length > n ? this.substr(0, n - 1) + '...' : this.toString();
+	};

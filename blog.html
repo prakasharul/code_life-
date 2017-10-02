@@ -21,14 +21,14 @@
             </ul>
           </div>
           <div class="body">
-            Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat. Ridiculus nostra.
+            {{post.post.trunc(150)}}
           </div>
         </div>
       </div>
     </div>
   </div>
   <!-- list layout -->
-  <div class="container" id="listlayout">
+  <div class="container" id="listlayout" style="display:none">
     <div class="row" ng-id="posts">
       <div class="col-md-9" ng-repeat="post in posts.data">
         <div class="info-box hover-expand-effect">
@@ -39,7 +39,7 @@
             <div class="number">{{ post.title }}</div>
             <div class="text">{{post.post_type}}</div>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p>
+            <p>{{post.post.trunc(50)}}</p>
           </div>
         </div>
       </div>
